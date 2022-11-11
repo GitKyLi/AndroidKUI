@@ -8,7 +8,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 
-import com.kyli.kui.dialog.KuiLoadingDialog;
+import com.kyli.kui.dialog.zerodim.KuiLoadingDialog;
 
 public class MainActivity extends AppCompatActivity {
     private Dialog dialog;

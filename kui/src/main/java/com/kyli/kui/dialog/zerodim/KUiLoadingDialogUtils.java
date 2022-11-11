@@ -1,11 +1,12 @@
-package com.kyli.kui.dialog;
+package com.kyli.kui.dialog.zerodim;
 
 import android.app.Dialog;
 import android.content.Context;
 import android.view.ViewGroup;
 
-import com.kyli.kui.view.KUILoadingRotateView;
-
+import com.kyli.kui.dialog.zerodim.KUiZeroDimDialog;
+import com.kyli.kui.view.loading.KUILoadingRotateView;
+@Deprecated
 public class KUiLoadingDialogUtils {
 
     public static Dialog create(Context context) {

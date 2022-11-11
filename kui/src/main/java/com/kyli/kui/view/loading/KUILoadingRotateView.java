@@ -1,4 +1,4 @@
-package com.kyli.kui.view;
+package com.kyli.kui.view.loading;
 
 import android.animation.TypeEvaluator;
 import android.animation.ValueAnimator;

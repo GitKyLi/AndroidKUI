@@ -1,4 +1,4 @@
-package com.kyli.kui.dialog;
+package com.kyli.kui.dialog.zerodim;
 
 import android.app.Dialog;
 import android.content.Context;
