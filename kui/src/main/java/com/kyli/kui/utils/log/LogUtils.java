@@ -4,29 +4,35 @@ import android.util.Log;
 
 public class LogUtils {
 
+    public static boolean LOG_ENABLE = true;
 
     public static void i(String tag, String i) {
-        delegate.i(tag, i);
+        if (LOG_ENABLE)
+            delegate.i(tag, i);
     }
 
 
     public static void e(String tag, String e) {
-        delegate.e(tag, e);
+        if (LOG_ENABLE)
+            delegate.e(tag, e);
     }
 
 
     public static void v(String tag, String v) {
-        delegate.v(tag, v);
+        if (LOG_ENABLE)
+            delegate.v(tag, v);
     }
 
 
     public static void d(String tag, String d) {
-        delegate.d(tag, d);
+        if (LOG_ENABLE)
+            delegate.d(tag, d);
     }
 
 
     public static void w(String tag, String w) {
-        delegate.w(tag, w);
+        if (LOG_ENABLE)
+            delegate.w(tag, w);
     }
 
     public interface KLog {

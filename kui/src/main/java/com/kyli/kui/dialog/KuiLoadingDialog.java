@@ -7,10 +7,10 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 
-import com.kyli.kui.view.KUILoadingView;
+import com.kyli.kui.view.KUILoadingRotateView;
 
 public class KuiLoadingDialog extends KUiZeroDimDialog {
-    private KUILoadingView kuiLoadingView;
+    private KUILoadingRotateView kuiLoadingRotateView;
 
     public KuiLoadingDialog(@NonNull Context context) {
         super(context);
@@ -31,21 +31,21 @@ public class KuiLoadingDialog extends KUiZeroDimDialog {
     @Override
     public void show() {
         super.show();
-        kuiLoadingView.start();
+        kuiLoadingRotateView.start();
     }
 
     @Override
     public void dismiss() {
         super.dismiss();
-        kuiLoadingView.stop();
+        kuiLoadingRotateView.stop();
     }
 
 
     private View getLoadingView() {
-        kuiLoadingView = new KUILoadingView(getContext());
+        kuiLoadingRotateView = new KUILoadingRotateView(getContext());
 
-        kuiLoadingView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
-        return kuiLoadingView;
+        kuiLoadingRotateView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+        return kuiLoadingRotateView;
     }
 
 
