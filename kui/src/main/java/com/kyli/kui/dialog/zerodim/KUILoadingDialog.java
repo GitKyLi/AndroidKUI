@@ -9,9 +9,11 @@ import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
 
 import com.kyli.kui.R;
+import com.kyli.kui.view.loading.IKUILading;
 import com.kyli.kui.view.loading.KUILoadingRotateView;
 
 public class KUILoadingDialog extends KUiZeroDimDialog {
+    private IKUILading ikuiLading;
 
     public KUILoadingDialog(@NonNull Context context) {
         super(context);
@@ -30,8 +32,31 @@ public class KUILoadingDialog extends KUiZeroDimDialog {
     public void addView(View view) {
         FrameLayout frameLayout = findViewById(R.id.container);
         frameLayout.addView(view);
+        if (view instanceof IKUILading) {
+            ikuiLading = (IKUILading) view;
+        }
     }
 
+    @Override
+    public void show() {
+        super.show();
+        if (ikuiLading != null)
+            ikuiLading.start();
+    }
+
+    @Override
+    public void dismiss() {
+        super.dismiss();
+        if (ikuiLading != null)
+            ikuiLading.stop();
+    }
+
+    @Override
+    public void cancel() {
+        if (ikuiLading != null) {
+            ikuiLading.stop();
+        }
+    }
 
     public static class Builder {
         private Context context;
@@ -48,7 +73,10 @@ public class KUILoadingDialog extends KUiZeroDimDialog {
         }
 
         public KUILoadingDialog build() {
-            return new KUILoadingDialog(context);
+            KUILoadingDialog kui = new KUILoadingDialog(context);
+            kui.create();
+            kui.addView(view);
+            return kui;
         }
     }
 

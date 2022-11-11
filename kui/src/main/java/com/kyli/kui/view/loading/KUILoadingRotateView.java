@@ -23,7 +23,7 @@ import com.kyli.kui.utils.log.LogUtils;
  * @author Kyli   2022年11月10日16:13:06
  * 绘制转圈的加载 视图   依赖{@link android.animation.ValueAnimator} 实现
  */
-public class KUILoadingRotateView extends View {
+public class KUILoadingRotateView extends View implements IKUILading {
 
     private ValueAnimator valueAnimator;
 
@@ -170,10 +170,13 @@ public class KUILoadingRotateView extends View {
 
     }
 
+    @Override
     public void start() {
         startAnimator();
     }
 
+
+    @Override
     public void stop() {
         if (valueAnimator != null) {
             valueAnimator.removeAllUpdateListeners();
