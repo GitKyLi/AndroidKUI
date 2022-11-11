@@ -1,2 +1,3 @@
 # AndroidKUI
-about  android  UI utils   
+-- GRADLE:
+ implementation 'com.github.GitKyLi:AndroidKUI:Tag'
