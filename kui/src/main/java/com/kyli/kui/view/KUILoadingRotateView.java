@@ -102,6 +102,9 @@ public class KUILoadingRotateView extends View {
         this.centerCircleRadius = centerCircleRadius;
     }
 
+    public void setWheelNum(int wheelNum) {
+        this.wheelNum = wheelNum;
+    }
 
     private void startAnimator() {
         if (valueAnimator == null) {
