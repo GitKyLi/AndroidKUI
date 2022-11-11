@@ -106,6 +106,14 @@ public class KUILoadingRotateView extends View {
         this.wheelNum = wheelNum;
     }
 
+    public void setBgColor(int bgColor) {
+        this.bgColor = bgColor;
+    }
+
+    public void setWheelColor(int wheelColor) {
+        this.wheelColor = wheelColor;
+    }
+
     private void startAnimator() {
         if (valueAnimator == null) {
             valueAnimator = ValueAnimator.ofInt(0, wheelNum);
