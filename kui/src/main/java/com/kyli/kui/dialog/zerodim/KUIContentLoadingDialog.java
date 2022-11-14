@@ -7,6 +7,7 @@ import android.os.Looper;
 import androidx.annotation.NonNull;
 
 /**
+ * @author Kyli
  * 设置dialog 显示的最小时间 和最小延迟时间   保障UI的流畅性
  * <p>
  * 当我们发起显示{@link #show()}  需要移除等待队列中的关闭方法   防止两次交叉出现闪烁
