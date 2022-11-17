@@ -73,6 +73,11 @@ public class KUILoadingRotateView extends View implements IKUILading {
     }
 
     private void init() {
+
+        setBg(getResources().getDrawable(com.kyli.kui.R.drawable.loading_bg1));
+        setPadding((int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 15, getResources().getDisplayMetrics()));
+        setCenterCircleRadius((int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 10, getResources().getDisplayMetrics()));
+
         paint = new Paint();
         paint.setColor(wheelColor);
         paint.setStrokeCap(Paint.Cap.ROUND);

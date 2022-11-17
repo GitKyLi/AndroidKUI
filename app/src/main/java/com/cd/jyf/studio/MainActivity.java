@@ -36,13 +36,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         init();
-        IKUILading loadingView = dialog.getLoadingView();
-        if(loadingView instanceof KUILoadingRotateView){
-            KUILoadingRotateView  kuiLoadingRotateView= (KUILoadingRotateView) loadingView;
-            kuiLoadingRotateView.setBg(getResources().getDrawable(com.kyli.kui.R.drawable.loading_bg1));
-            kuiLoadingRotateView.setPadding((int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,15,getResources().getDisplayMetrics()));
-            kuiLoadingRotateView.setCenterCircleRadius((int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,10,getResources().getDisplayMetrics()));
-        }
+
 
     }
 
