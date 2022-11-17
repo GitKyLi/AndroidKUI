@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/android/KAndroid/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2185" />
+        <entry key="..\:/android/KAndroid/app/src/main/res/layout/main.xml" value="0.32916666666666666" />
+        <entry key="..\:/android/KAndroid/kui/src/main/res/drawable/loading_bg1.xml" value="0.2185" />
         <entry key="..\:/android/KAndroid/kui/src/main/res/layout/kui_dialog_framelayout.xml" value="0.22708333333333333" />
         <entry key="..\:/android/Studio/app/src/main/res/layout/dialog.xml" value="0.17916666666666667" />
         <entry key="..\:/android/Studio/app/src/main/res/layout/main.xml" value="0.19583333333333333" />

@@ -37,6 +37,10 @@ public class KUILoadingDialog extends KUiZeroDimDialog {
         }
     }
 
+    public IKUILading getLoadingView() {
+        return ikuiLading;
+    }
+
     @Override
     public void show() {
         super.show();

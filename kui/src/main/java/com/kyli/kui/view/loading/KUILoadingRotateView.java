@@ -1,12 +1,13 @@
 package com.kyli.kui.view.loading;
 
-import android.animation.TypeEvaluator;
 import android.animation.ValueAnimator;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Point;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.util.Size;
@@ -31,7 +32,7 @@ public class KUILoadingRotateView extends View implements IKUILading {
     private int wheelNum = 12;
 
 
-    private int bgColor = Color.BLACK;
+    private Drawable bgDrawable = new ColorDrawable(Color.BLACK);
 
 
     private int wheelColor = Color.WHITE;
@@ -106,8 +107,8 @@ public class KUILoadingRotateView extends View implements IKUILading {
         this.wheelNum = wheelNum;
     }
 
-    public void setBgColor(int bgColor) {
-        this.bgColor = bgColor;
+    public void setBg(Drawable drawable) {
+        this.bgDrawable = drawable;
     }
 
     public void setWheelColor(int wheelColor) {
@@ -143,9 +144,11 @@ public class KUILoadingRotateView extends View implements IKUILading {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        canvas.drawColor(bgColor);
-        canvas.saveLayer(0, 0, getWidth(), getHeight(), paint);
+        bgDrawable.setBounds(0, 0, getWidth(), getRight());
+        bgDrawable.draw(canvas);
+        int i = canvas.saveLayer(0, 0, getWidth(), getHeight(), paint);
         drawLoading(canvas);
+        canvas.restoreToCount(i);
     }
 
     @Override
