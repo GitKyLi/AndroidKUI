@@ -3,8 +3,12 @@ package com.cd.jyf.studio;
 import android.app.Dialog;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.TypedValue;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.WindowManager;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -36,8 +40,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         init();
-
-
+    
     }
 
     private void init() {

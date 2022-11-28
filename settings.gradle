@@ -16,3 +16,4 @@ rootProject.name = "KAndroid"
 include ':app'
 include ':kui'
 include ':studio'
+include ':KJavaExtension'
