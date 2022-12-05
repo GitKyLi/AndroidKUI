@@ -1,14 +1,28 @@
 package com.cd.jyf.studio;
 
+import android.app.ActivityManager;
 import android.app.Dialog;
+import android.content.Context;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.ColorFilter;
+import android.graphics.ColorMatrix;
+import android.graphics.ColorMatrixColorFilter;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Process;
+import android.provider.Settings;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,27 +38,23 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-        findViewById(R.id.b1)
-                .setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.show();
+        ImageView imageView = findViewById(R.id.img);
 
-            }
-        });
-        findViewById(R.id.b2).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.dismiss();
-            }
-        });
 
-        init();
-    
+        ColorMatrix  colorMatrix=new ColorMatrix();
+        colorMatrix.setSaturation(0f);
+        ColorMatrixColorFilter  colorMatrixColorFilter=new ColorMatrixColorFilter(colorMatrix);
+        imageView.setColorFilter(colorMatrixColorFilter);
+
+//
+//        getPackageManager().getArtManager();
+
+
+
     }
 
     private void init() {
-        dialog = KUILoadingDialog.buildRotateLoading(this,null).build();
+        dialog = KUILoadingDialog.buildRotateLoading(this, null).build();
 
     }
 }
